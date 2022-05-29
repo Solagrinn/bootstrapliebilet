@@ -3,18 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>E-Bilet</title>
 
-        <style>
-
-        </style>
-        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/kredikarticss.css"/>
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/navbarandfooter.css"/>
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
-
+        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/koltuk.css"/>
+        <title>Movie Seat Booking</title>
     </h:head>
     <h:body>
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
@@ -47,63 +42,94 @@
             </div>
         </nav>
 
-        <div>
-            <main class="page payment-page">
-                <section class="payment-form dark" style="background-color: #ffd045;
-background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
-                    <div class="container">
-                        <div class="block-heading">
-                            <h2 style="color:orange">Ödemenizin tamamlanmasına sadece birkaç adım kaldı.</h2>
-                            <p>Lütfen koltuğunuzu teyit ettikten sonra ödemenizi tamamlayın.</p>
-                        </div>
-                        <form>
-                            <div class="products">
-                                <h3 class="title">Koltuğunuz;</h3>
-                                <div class="item">
-                                    <span class="price">$200</span>
-                                    <p class="item-name">Product 1</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet</p>
-                                </div>
-                                <div class="item">
-                                    <span class="price">$120</span>
-                                    <p class="item-name">Product 2</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet</p>
-                                </div>
-                                <div class="total">Toplam<span class="price">$320</span></div>
-                            </div>
-                            <div class="card-details">
-                                <h3 class="title">Kredi kartı bilgileri</h3>
-                                <div class="row">
-                                    <div class="form-group col-sm-7">
-                                        <label for="card-holder">Kart üzerindeki isim</label>
-                                        <input id="card-holder" type="text" class="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1"></input>
-                                    </div>
-                                    <div class="form-group col-sm-5">
-                                        <label for="">Son kullanma tarihi</label>
-                                        <div class="input-group expiration-date">
-                                            <input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="basic-addon1"></input>
-                                            <span class="date-separator" style="margin-left:6px" >/</span>
-                                            <input type="text" class="form-control" placeholder="YY" aria-label="YY" aria-describedby="basic-addon1"></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-sm-8">
-                                        <label for="card-number" style="margin-top:20px">Kart numarası</label>
-                                        <input id="card-number" type="text" class="form-control" placeholder="Card Number" aria-label="Card Holder" aria-describedby="basic-addon1"></input>
-                                    </div>
-                                    <div class="form-group col-sm-4">
-                                        <label for="cvc" style="margin-top:20px">CVC</label>
-                                        <input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1"></input>
-                                    </div>
-                                    <div class="form-group col-sm-12">
-                                        <button type="button" class="btn btn-primary btn-block">Tamamla</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </main>
+        <ul class="showcase">
+            <li>
+                <div class="seat"></div>
+                <small>N/A</small>
+            </li>
+            <li>
+                <div class="seat selected"></div>
+                <small>Selected</small>
+            </li>
+            <li>
+                <div class="seat occupied"></div>
+                <small>Occupied</small>
+            </li>
+        </ul>
+
+        <div class="container">
+            <div class="screen"></div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+            </div>
         </div>
+
+        <p class="text">
+            You have selected <span id="count">0</span> seats for a price of $<span
+                id="total"
+                >0</span
+            >
+        </p>
+
+
 
         <footer class="site-footer">
             <div class="container">
@@ -159,6 +185,6 @@ background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
         </footer>
 
         <script src="/EBilet/faces/javax.faces.resource/js/bootstrap.bundle.min.js"></script>
+        <script src="/EBilet/faces/javax.faces.resource/js/koltuk.js"></script>
     </h:body>
 </html>
-

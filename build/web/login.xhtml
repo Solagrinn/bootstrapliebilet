@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/navbarandfooter.css"/>
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/login.css"/>
-
+ <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/login.css"/>
+ 
     </h:head>
     <h:body>
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
@@ -46,43 +46,78 @@
                 </div>
             </div>
         </nav>
+        
 
-        <section class="ftco-section" style="background-image:url(./resources/img/arkaplan.png)">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="login-wrap p-0">
-                            <h3 class="mb-4 text-center">Giriş Yap</h3>
-                            <form action="#" class="signin-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="true"/>
-                                </div>
-                                <div class="form-group">
-                                    <input id="password-field" type="password" class="form-control" placeholder="Şifre" required="true"/>
-                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary submit px-3">GİRİŞ YAP</button>
-                                </div>
-                                <div class="form-group d-md-flex">
-                                    <div class="w-50">
-                                        <label class="checkbox-wrap checkbox-primary">Beni Hatırla
-                                            <input type="checkbox" checked="true"/>
-                                            <span class="checkmark"></span>
-                                        </label>
+        <div style="background-image:url(./resources/img/arkaplan.png)">
+            <main id="content" role="main" >
+                <!-- Form -->
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center min-vh-lg-100">
+                        <div class="col-md-5">
+
+                            <div class="card card-bordered shadow-none rounded-3">
+                                <div class="card-body">
+                                    <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+                                        <!-- Heading -->
+                                        <div class="text-center mb-5 mb-md-7">
+                                            <h1 class="h2">Oturum Aç</h1>
+                                            <p>Devam etmek için giriş yapmalısınız.</p>
+                                        </div>
+                                        <!-- End Heading -->
+
+                                        <!-- Form -->
+                                        <form action="" method="post">
+                                            <!-- Form -->
+                                            <div class="mb-4">
+                                                <label class="form-label" for="inputEmail">E-Posta</label>
+                                                <input type="email" class="form-control form-control-lg" name="email" id="inputEmail" placeholder="name@example.com" aria-label="name@example.com" value="" required="true"/>
+                                            </div>
+                                            <!-- End Form -->
+
+                                            <!-- Form -->
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="inputPassword">Şifre</label>
+
+                                                </div>
+
+                                                <div class="input-group input-group-merge">
+                                                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="inputPassword" placeholder="*********" aria-label="*********" required="true" minlength="4" data-hs-toggle-password-options='{
+                                                           "target": "#changePassTarget",
+                                                           "defaultClass": "icon-eye-off",
+                                                           "showClass": "icon-eye",
+                                                           "classChangeTarget": "#changePassIcon"
+                                                           }'/>
+                                                    <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
+                                                        <i id="changePassIcon" class="icon-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- End Form -->
+
+                                            <input type="hidden" name="spamToken" value="9AE96EEF2B112C013244CC4B8FC97CF6" />
+
+                                            <div class="d-grid mb-4">
+                                                <button type="submit" name="login" class="btn btn-primary btn-lg">Giriş Yap</button>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <p>Hesabınız yok mu? <a class="link" href="register.xhtml">Hesap Oluştur</a></p>
+                                            </div>
+                                        </form>
+                                        <!-- End Form -->
                                     </div>
-                                    <div class="w-50 text-md-right">
-                                        <a href="#" style="color: #fff">Şifremi Unuttum</a>
-                                    </div>
                                 </div>
-                            </form>
-
-
+                            </div>
                         </div>
+                        <!-- End Col -->
                     </div>
+                    <!-- End Row -->
                 </div>
-            </div>
-        </section>
+                <!-- End Form -->
+            </main>
+        </div>
+
 
         <footer class="site-footer">
             <div class="container">
