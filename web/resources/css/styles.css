@@ -114,11 +114,11 @@ main {
     text-align: center;
 }
 
-.row {
+.roww {
     margin-bottom: 40px;
 }
 
-.row::after {
+.roww::after {
     content: "";
     display: block;
     clear: both;
