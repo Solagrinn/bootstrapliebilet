@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 import javax.sql.rowset.CachedRowSet;
 
 @ManagedBean(name = "GirisBean")
-@RequestScoped
+@SessionScoped
 
 public class GirisBean {
 
@@ -64,4 +64,35 @@ public class GirisBean {
     public void setSifre(String sifre) {
         this.sifre = sifre;
     }
+
+    public String response() throws ClassNotFoundException, SQLException {
+        if (email != null && sifre != null) {
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/EBiletDB", "admin", "admin");
+
+            if (connection == null) {
+                throw new SQLException("Unable to connect to DataSource");
+            }
+
+            try {
+                PreparedStatement getEntry = connection.prepareStatement(
+                        "SELECT * FROM CUSTOMER "
+                        + "WHERE USERNAME = ? AND PASSWORD = ?");
+
+                getEntry.setString(1, getEmail());
+                getEntry.setString(2, getSifre());
+
+                ResultSet rs = getEntry.executeQuery();
+                rs.next();
+                
+                return "Hoşgeldin, " + rs.getString(2);
+
+            } finally {
+                connection.close();
+            }
+
+        } else {
+            return "<a href=\"login.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">Giriş Yap</button></a>";
+        } // request has not yet been made
+    } // end method getResult
 }
