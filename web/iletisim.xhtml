@@ -42,7 +42,7 @@
                             <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
@@ -192,7 +192,7 @@
                 document.getElementById("iletisim").style.height = (document.getElementById("bilgiler").getBoundingClientRect().height + 589).toString() + "px";
             }
         </script>
-        
+
         <script src="/EBilet/faces/javax.faces.resource/js/bootstrap.bundle.min.js"></script>
     </h:body>
 </html>
