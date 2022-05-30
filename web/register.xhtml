@@ -47,11 +47,11 @@
         </nav>
 
 
-        <div style="background-image:url(./resources/img/arkaplan.png); padding-top: 60px; padding-bottom: 110px;">
-            <main id="content" role="main" class="flex-grow-1 mt-5">
+        <div style="background-image:url(./resources/img/arkaplan.png); padding-top: 110px; padding-bottom: 110px;">
+            <main id="content" role="main" >
                 <!-- Form -->
                 <div class="container">
-                    <div class="row d-flex justify-content-center align-items-center min-vh-lg-100 my-10">
+                    <div class="row d-flex justify-content-center align-items-center min-vh-lg-100">
                         <div class="col-md-5">
 
                             <div class="card card-bordered shadow-none rounded-3">
@@ -59,8 +59,8 @@
                                     <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
                                         <!-- Heading -->
                                         <div class="text-center mb-5 mb-md-7">
-                                            <h1 class="h2">Hesap Oluştur</h1>
-                                            <p>Kayıt olmak için aşağıdaki formu doldurunuz.</p>
+                                            <h1 class="h2">Oturum Aç</h1>
+                                            <p>Devam etmek için giriş yapmalısınız.</p>
                                         </div>
                                         <!-- End Heading -->
 
@@ -68,54 +68,32 @@
                                         <h:form>
                                             <!-- Form -->
                                             <div class="mb-4">
-                                                <div class="row g-2">
-                                                    <div class="col-md-6">
-                                                        <label class="form-label" for="inputFirstName">Ad</label>
-                                                        <h:inputText value="#{KayitBean.ad}" class="form-control form-control-lg" id="inputFirstName" required="true"/>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="form-label" for="inputLastName">Soyad</label>
-                                                        <h:inputText value="#{KayitBean.soyad}" class="form-control form-control-lg" id="inputLastName" required="true"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Form -->
-
-                                            <!-- Form -->
-                                            <div class="mb-4">
                                                 <label class="form-label" for="inputEmail">E-Posta</label>
-                                                <h:inputText value="#{KayitBean.email}" class="form-control form-control-lg" id="inputEmail" required="true"/>
+                                                <h:inputText value="#{GirisBean.email}" class="form-control form-control-lg" id="inputEmail" required="true"/>
                                             </div>
                                             <!-- End Form -->
 
                                             <!-- Form -->
                                             <div class="mb-4">
-                                                <label class="form-label" for="inputPassword">Şifre</label>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="inputPassword">Şifre</label>
+
+                                                </div>
+
                                                 <div class="input-group input-group-merge">
-                                                    <h:inputText value="#{KayitBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
+                                                    <h:inputText value="#{GirisBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->
 
-                                            <!-- Form -->
-                                            <div class="mb-4">
-                                                <label class="form-label" for="inputPasswordRe">Şifre (Tekrar)</label>
-                                                <div class="input-group input-group-merge">
-                                                    <h:inputText required="true" class="js-toggle-password form-control form-control-lg"/>
-                                                </div>
-                                            </div>
-                                            <!-- End Form -->
+                                            <input type="hidden" name="spamToken" value="9AE96EEF2B112C013244CC4B8FC97CF6" />
 
                                             <div class="d-grid mb-4">
-                                                <h:commandButton value="Hesap Oluştur" action="#{KayitBean.kayitEt()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
-                                            </div>
-
-                                            <div class="mb-4">
-                                                Hesap oluşturarak <a href="#" target="_blank">Kullanım Şartları</a>'nı ve <a href="#" target="_blank">Gizlilik Politikası</a>'nı kabul etmiş olursunuz.
+                                                <h:commandButton value="Giriş Yap" action="#{GirisBean.girisYap()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
                                             </div>
 
                                             <div class="text-center">
-                                                <p>Hesabınız var mı? <a class="link" href="login.xhtml">Giriş Yap</a></p>
+                                                <p>Hesabınız yok mu? <a class="link" href="register.xhtml">Hesap Oluştur</a></p>
                                             </div>
                                         </h:form>
                                         <!-- End Form -->
