@@ -65,11 +65,11 @@
                                         <!-- End Heading -->
 
                                         <!-- Form -->
-                                        <form action="" method="post">
+                                        <h:form>
                                             <!-- Form -->
                                             <div class="mb-4">
                                                 <label class="form-label" for="inputEmail">E-Posta</label>
-                                                <input type="email" class="form-control form-control-lg" name="email" id="inputEmail" placeholder="name@example.com" aria-label="name@example.com" value="" required="true"/>
+                                                <h:inputText value="#{GirisBean.email}" class="form-control form-control-lg" id="inputEmail" required="true"/>
                                             </div>
                                             <!-- End Form -->
 
@@ -81,12 +81,7 @@
                                                 </div>
 
                                                 <div class="input-group input-group-merge">
-                                                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="inputPassword" placeholder="*********" aria-label="*********" required="true" minlength="4" data-hs-toggle-password-options='{
-                                                           "target": "#changePassTarget",
-                                                           "defaultClass": "icon-eye-off",
-                                                           "showClass": "icon-eye",
-                                                           "classChangeTarget": "#changePassIcon"
-                                                           }'/>
+                                                    <h:inputText value="#{GirisBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->
@@ -94,13 +89,13 @@
                                             <input type="hidden" name="spamToken" value="9AE96EEF2B112C013244CC4B8FC97CF6" />
 
                                             <div class="d-grid mb-4">
-                                                <button type="submit" name="login" class="btn btn-primary btn-lg">Giriş Yap</button>
+                                                <h:commandButton value="Giriş Yap" action="#{GirisBean.girisYap()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
                                             </div>
 
                                             <div class="text-center">
                                                 <p>Hesabınız yok mu? <a class="link" href="register.xhtml">Hesap Oluştur</a></p>
                                             </div>
-                                        </form>
+                                        </h:form>
                                         <!-- End Form -->
                                     </div>
                                 </div>
