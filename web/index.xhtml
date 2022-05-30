@@ -44,7 +44,7 @@
                             <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <h:outputText value="#{GirisBean.response()}" escape="false"/> 
+                    <a href="faces/login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
                 </div>
             </div>
         </nav>
@@ -52,8 +52,9 @@
 
         <section id="showcase">
             <div class="content">
-                <h2>Welcome</h2>
-                <h3>Millions of movies, TV shows and people to discover. Explore now.
+                <h2>Hoş geldiniz</h2>
+                <h3>Aksiyon, Dram ve daha birçoğu..<br></br>
+                    vizyondakilere göz atın.
                 </h3>
             </div>
         </section>
@@ -61,26 +62,25 @@
 
         <section id="how-it-works">
             <div class="container">
-                <div class="row">
-                    <h2 class="section-title">How it works?</h2>
-                    <p>We will show you step by step how to start watching your favorite movies and tv shows starting now!</p>
+                <div class="row" style='margin-bottom:50px'>
+                    <h2 class="section-title">Neden bizi tercih etmelisiniz?</h2>
                 </div>
 
                 <div class="row">
                     <div class="icon-box col-3">
                         <i class="fas fa-sign-in-alt fa-3x"></i>
-                        <h3>Register</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                        <h3>Ücretsiz yiyecek ve meşrubatlar</h3>
+                        <p>film aralarında büfemize biletinizi gösterek istediğiniz yiyecek ve içecekleri alabilirsiniz.</p>
                     </div>
                     <div class="icon-box col-3">
                         <i class="fab fa-buffer fa-3x"></i>
-                        <h3>Choose a Plan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                        <h3>Dobly Atmos ses sistemi</h3>
+                        <p>sektörün en kaliteli ses sistemiyle ekrana bağlanın.</p>
                     </div>
                     <div class="icon-box col-3">
                         <i class="far fa-smile fa-3x"></i>
-                        <h3>Enjoy Moviies</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                        <h3>Çok fonksiyonlu koltuklar</h3>
+                        <p>ister oturarak, ister yatarak; en rahat hangi pozisyonda film izlemeyi seviyorsanız öyle izleyin.</p>
                     </div>
                 </div>
             </div>
@@ -89,84 +89,26 @@
             <div class="roww">
                 <div class="col-2 features__left"></div>
                 <div class="col-2 features__right">
-                    <h3>Watch all Movies and TV Shows once they get released!</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
-                    <a class="btn btn-secondary" href="#">View Features</a>
+                    <h3>Tüm filmleri vizyona girdiği andan itibaren E-Bilet'ten izleyin!</h3>
+                    <p>Vizyondaki filmleri açısından Avcılar'daki en güncel ve en kaliteli sinema E-Bilet, uygun fiyatlı biletleriyle sadece bir Metrobüs ötede.</p>
+                    <a class="btn btn-secondary" href="#">Neredeymiş bu?</a>
                 </div>
             </div>
         </section>
-        <section id="plans">
-            <h2 class="section-title">Become a Premium Member</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 plan">
-                        <div class="inner-plan">
-                            <h2>Free</h2>
-                            <h3>0/month</h3>
-                            <ul class="plan__features">
-                                <li>HD available</li>
-                                <li>Unlimited Movies and TV shows</li>
-                                <li>Watch on your phone and tablet</li>
-                                <li>Download and watch offline</li>
-                                <li>Screens you can watch</li>
-                                <li>First Month Free</li>
-                            </ul>
-                            <div>
-                                <button class="btn btn-primary">Choose Plan</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 plan plan--featured">
-                        <div class="inner-plan recommended_plan">
-                            <h2 class="plan__badge">Recommended</h2>
-                            <h2>Basic</h2>
-                            <h3>$9.99/month</h3>
-                            <ul class="plan__features">
-                                <li>HD available</li>
-                                <li>Unlimited Movies and TV shows</li>
-                                <li>Watch on your phone and tablet</li>
-                                <li>Download and watch offline</li>
-                                <li>Screens you can watch</li>
-                                <li>First Month Free</li>
-                            </ul>
-                            <div>
-                                <button class="btn btn-primary">Choose Plan</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 plan">
-                        <div class="inner-plan">                    
-                            <h2>Premium</h2>
-                            <h3>$19.99/month</h3>
-                            <ul class="plan__features">
-                                <li>HD available</li>
-                                <li>Unlimited Movies and TV shows</li>
-                                <li>Watch on your phone and tablet</li>
-                                <li>Download and watch offline</li>
-                                <li>Screens you can watch</li>
-                                <li>First Month Free</li>
-                            </ul>
-                            <div>
-                                <button class="btn btn-primary">Choose Plan</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <section id="counters" >
             <div class="roww counter" style="padding-bottom:25px; padding-top:25px">
                 <div class="col-3">
-                    <span class="counter__item">974</span>
-                    <h4>Movies</h4>
+                    <span class="counter__item" style="color: #4672a3">%98</span>
+                    <h4>Tavsiye oranı, Tripadvisor</h4>
                 </div>
                 <div class="col-3">
-                    <span class="counter__item">456</span>
-                    <h4>Tv Shows</h4>
+                    <span class="counter__item" style="color: #4672a3">4,9</span>
+                    <h4>Yıldız, Google maps</h4>
                 </div>
                 <div class="col-3">
-                    <span class="counter__item">976</span>
-                    <h4>Users</h4>
+                    <span class="counter__item" style="color: #4672a3">8000</span>
+                    <h4>Beğeni, Facebook</h4>
                 </div>
             </div>
         </section>
