@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
 
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/bootstrap.min.css"/>
@@ -45,91 +46,28 @@
         <ul class="showcase">
             <li>
                 <div class="seat"></div>
-                <small>N/A</small>
+                <small>Seçilebilir</small>
             </li>
             <li>
                 <div class="seat selected"></div>
-                <small>Selected</small>
+                <small>Seçilen Koltuk</small>
             </li>
             <li>
                 <div class="seat occupied"></div>
-                <small>Occupied</small>
+                <small>Dolu</small>
             </li>
         </ul>
 
-        <div class="container">
-            <div class="screen"></div>
-
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat occupied"></div>
-                <div class="seat occupied"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat occupied"></div>
-                <div class="seat occupied"></div>
-            </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat occupied"></div>
-                <div class="seat occupied"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat occupied"></div>
-                <div class="seat occupied"></div>
-                <div class="seat occupied"></div>
-                <div class="seat"></div>
-            </div>
-        </div>
+        <h:outputText value="#{OdemeBean.koltuklar()}" escape="false"/>
 
         <p class="text">
-            You have selected <span id="count">0</span> seats for a price of $<span
-                id="total"
-                >0</span
-            >
+            <span id="koltukstring"></span>
         </p>
 
-
+        <h:form id="koltukForm">
+            <h:inputHidden id="koltukno" value="#{OdemeBean.koltukno}" />
+            <h:commandButton value="Bilet satın al" action="kartsayfasi.xhtml" class="satinal form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px"/>
+        </h:form>
 
         <footer class="site-footer">
             <div class="container">
@@ -185,5 +123,12 @@
 
         <script src="/EBilet/faces/javax.faces.resource/js/bootstrap.bundle.min.js"></script>
         <script src="/EBilet/faces/javax.faces.resource/js/koltuk.js"></script>
+
+        <script>
+            window.onload = function () {
+                document.getElementsByClassName('satinal')[0].style.visibility = 'hidden';
+            };
+        </script>
+
     </h:body>
 </html>
