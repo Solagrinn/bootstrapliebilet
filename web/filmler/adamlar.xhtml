@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>E-Bilet</title>
 
@@ -46,7 +47,7 @@
             </div>
         </nav>
 
-       <div class="container my-4"/>
+        <div class="container my-4"/>
 
         <div class="row">
             <div class=" col-2"  >
@@ -77,36 +78,42 @@
                 </p>
             </div>
 
-           
+
 
             <div class="col-2" style="margin-right:5px ;">
                 <div class="row">
-                    <button type="button" class="btn btn-primary">Fragmanı izle</button>
+                    <h:form>
+                    <button type="button" class="btn btn-primary" style="width:200px">Fragmanı izle</button>
+                    </h:form>
                 </div>
                 <div class="row my-2">
-                    <button type="button" class="btn btn-danger">Bilet satın al</button>
+                    <h:form>
+                        <h:commandButton value="Bilet satın al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px">
+                            <f:setPropertyActionListener target="#{OdemeBean.email}" value="#{GirisBean.email}" />
+                        </h:commandButton>
+                    </h:form>
                 </div>
             </div>
-        
-     
-    </div>
 
-    <div class="container my-4">
-        <h2 class="page-heading text-black">Filmin Konusu</h2>
-        <p>1986 yapımı Top Gun&#39;ın devam hik&acirc;yesi olan Top Gun: Maverick, usta pilot
-            Maverick&#39;in bu kez eğitmen olarak hava kuvvetlerine geri d&ouml;n&uuml;ş&uuml; sonrası
-            gelişen olayları anlatıyor.</p>
 
-        <p>Donanmanın en iyi pilotlarından biri olan Pete &ldquo;Maverick&rdquo; Mitchell, 30 yıllık
-            hizmetten sonra ait olduğu yerde, cesur bir test pilotu olarak sınırları zorlar ve kendisini
-            yere bağlayacak olan terfiden ka&ccedil;ar. Kendisini Top Gun mezunlarından oluşan bir
-            m&uuml;frezeyi o g&uuml;ne kadar hi&ccedil;bir pilotun g&ouml;rmediği &ouml;zel bir
-            g&ouml;rev i&ccedil;in eğitirken bulur. Belirsiz bir gelecekle ve ge&ccedil;mişinden gelen
-            anılarla karşı karşıya kalan Maverick, en b&uuml;y&uuml;k korkularıyla y&uuml;zleşmek ve
-            b&uuml;y&uuml;k bir fedakarlık yapmasını gerektiren bir g&ouml;reve gitmek zorunda kalır.
-        </p>
+        </div>
 
-    </div>
+        <div class="container my-4">
+            <h2 class="page-heading text-black">Filmin Konusu</h2>
+            <p>1986 yapımı Top Gun&#39;ın devam hik&acirc;yesi olan Top Gun: Maverick, usta pilot
+                Maverick&#39;in bu kez eğitmen olarak hava kuvvetlerine geri d&ouml;n&uuml;ş&uuml; sonrası
+                gelişen olayları anlatıyor.</p>
+
+            <p>Donanmanın en iyi pilotlarından biri olan Pete &ldquo;Maverick&rdquo; Mitchell, 30 yıllık
+                hizmetten sonra ait olduğu yerde, cesur bir test pilotu olarak sınırları zorlar ve kendisini
+                yere bağlayacak olan terfiden ka&ccedil;ar. Kendisini Top Gun mezunlarından oluşan bir
+                m&uuml;frezeyi o g&uuml;ne kadar hi&ccedil;bir pilotun g&ouml;rmediği &ouml;zel bir
+                g&ouml;rev i&ccedil;in eğitirken bulur. Belirsiz bir gelecekle ve ge&ccedil;mişinden gelen
+                anılarla karşı karşıya kalan Maverick, en b&uuml;y&uuml;k korkularıyla y&uuml;zleşmek ve
+                b&uuml;y&uuml;k bir fedakarlık yapmasını gerektiren bir g&ouml;reve gitmek zorunda kalır.
+            </p>
+
+        </div>
 
 
 

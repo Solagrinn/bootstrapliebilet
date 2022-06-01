@@ -39,9 +39,9 @@ public class GirisBean {
             ResultSet rs = getEntry.executeQuery();
 
             if (rs.next()) { // login başarılı
-                return "index.xhtml";
+                return "index.xhtml?faces-redirect=true";
             } else {
-                return "sss.xhtml";
+                return "sss.xhtml?faces-redirect=true";
             }
 
         } finally {
@@ -92,7 +92,7 @@ public class GirisBean {
             }
 
         } else {
-            return "<a href=\"login.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">Giriş Yap</button></a>";
-        } // request has not yet been made
-    } // end method getResult
+            return "<a href=\"/EBilet/faces/login.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">Giriş Yap</button></a>";
+        }
+    }
 }

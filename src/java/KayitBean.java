@@ -41,7 +41,7 @@ public class KayitBean {
             addEntry.setString(4, getSifre());
 
             addEntry.executeUpdate(); 
-            return "sss.xhtml";
+            return "sss.xhtml?faces-redirect=true";
         }
         finally {
             connection.close();
