@@ -6,25 +6,7 @@
         <title>E-Bilet</title>
 
         <style>
-            .accordion-item {
-                background: rgba(213, 252, 255, 0.514);
-            }
 
-            .accordion-button {
-                background: rgba(213, 252, 255, 0.514);
-            }
-
-            .accordion-button:not(.collapsed) {
-                background: rgba(119, 246, 255, 0.514);
-            }
-
-            .bg-light {
-                background: linear-gradient(-90deg, #2ca1cf, #1e3991)
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                background-color: #a3e5ff;
-            }
         </style>
 
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/bootstrap.min.css"/>
@@ -57,142 +39,97 @@
                             <a class="nav-link" href="iletisim.xhtml">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vizyondakiler.xhtml">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
 
         <section id="sikcasorulansorular" class="section pb-5 animate__animated animate__backInUp"
-                 style="background: #00000025;">
+                 style="background-image:url(./resources/img/arkaplan.png);">
             <h2 class="section-heading h1 pt-4"></h2>
             <div style="height: 40px"></div>
             <div class="row" style="margin: 0px 0px 0px 0px; height: 550px; width: 1500px;">
                 <div class="col-lg-5 mb-4">
-                    <div class="card sss" id="sikcasorulansorularcard" style="background: #00000025; margin-left: 35px;">
+                    <div class="card" id="sikcasorulansorularcard" style="background: #00000025; margin-left: 35px; width: calc(100vw - 6.5rem);">
                         <div class="card-body">
                             <h1 style="margin: 0px 0px 0px 0px; text-align:center;">Sıkça Sorulan Sorular</h1>
                             <div style="height: 15px;"></div>
-                            <h6 style="margin: 0px 0px 0px 0px; text-align:center;">Televizyonunuz
-                                için servise mi ihtiyacınız var?</h6>
+                            <h6 style="margin: 0px 0px 0px 0px; text-align:center;">Sinemaya gitmek için yardıma mı ihtiyacınız var?</h6>
                             <div style="height: 5px;"></div>
-                            <h4 style="margin: 0px 0px 0px 0px; text-align:center;">Kolaylıkla tamir
-                                ve montaj talebi oluşturabilirsiniz. Televizyonunuzda nasıl bir arıza yaşıyorsunuz?</h4>
+                            <h4 style="margin: 0px 0px 0px 0px; text-align:center;">Kolaylıkla
+                                yardım talebi oluşturabilirsiniz.</h4>
 
                             <div style="height: 20px;"></div>
-                            <div id="accordion1" style="margin-left: 35px; margin-right: 35px;">
+                            <div class="accordion" id="accordionExample">
+                                
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Televizyonumda güç var ancak açılmıyor? Televizyonumda hiç güç yok?
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Müşteri hizmetleri bölümünüze nasıl ulaşabilirim?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                         aria-labelledby="headingOne" data-bs-parent="#accordion1">
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Bu durum genelde anakart arızadır. Destek ve servis kaydı için bizimle iletişime
-                                            geçin.
+                                            Sayfamızın sağ alt köşesinde bulunan 0850 333 99 11 nolu Müşteri Hizmetleri hattımızdan ya da info@ebilet.com e-posta adresinden bize ulaşabilirsiniz.
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Televizyonumda ses var görüntü yok? Televizyonumun ekranı mavileşti/morardı?
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Size hangi zaman dilimlerinde ulaşabilirim?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                         data-bs-parent="#accordion1">
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Bu durum led aydınlatmanızın ömrünün dolduğunu ve tv ledlerinin kısa devre
-                                            yaptığını gösterir.
-                                            Destek ve servis kaydı için bizimle iletişime geçin.
+                                            Bize haftanın 7 günü 09:00 - 22:00 saatleri arasında ulaşabilirsiniz.
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseThree" aria-expanded="false"
-                                                aria-controls="collapseThree">
-                                            Televizyonum internete bağlanmıyor?
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Satın almış olduğum biletlerle ilgili e-posta ya da sms gelmedi, ne yapmalıyım?
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                         aria-labelledby="headingThree" data-bs-parent="#accordion1">
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Bu durumu yaşıyorsanız öncelikle internet sağlayıcınızı kontrol edin. sorun
-                                            devam ediyorsa ve
-                                            cihazınız 5 yıl öncesine aitse güncelleme desteği çekildiği için internete
-                                            bağlanmayabilir. Wifi
-                                            entegresi arıza yapmış olabilir. Tv güncellemesi gerekebilir. Destek ve servis
-                                            kaydı için bizimle
-                                            iletişime geçin.
+                                            Öncelikle e-postanızda gelen kutusunda e-postamızı bulamıyorsanız, gereksiz (junk ve spam) kutusunu da kontrol ediniz. Baktığınız klasörlerde tarafımızdan e-posta gelmedi ise sağ alt köşedeki Çağrı Merkezi numaramızdan 0850 333 99 11 biletlerinizi işlem sırasında kullanmış olduğunuz e-posta ve telefon numarası ile kontrol ettirebilir, tekrardan sms gönderilmesini sağlayabilirsiniz.
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFour" aria-expanded="false"
-                                                aria-controls="collapseFour">
-                                            Televizyonumun sesinde cızırtılar var? Ses düzgün çıkmıyor?
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            İnternetten biletimi aldıktan sonra tekrardan satın almış olduğum biletin basılı halini herhangi bir gişeden almama gerek var mıdır?
                                         </button>
                                     </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                         data-bs-parent="#accordion1">
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Bu durum anakartınızın üzerinde bulunan ses entegresinin kısa devre yapmış
-                                            olmasından
-                                            kaynaklanmaktadır. Diğer bir sebebi ise hoparlörünüz patlamış olabilir. Destek
-                                            ve servis kaydı için
-                                            bizimle iletişime geçin.
+                                           Hayır, Biletinial.com‘dan almış olduğunuz her bir bilet için vermiş olduğunuz e-mail adresinize veya sms ile gelen işlem numarasını etkinlik alanındaki yetkili kişiye göstermeniz yeterlidir. KİOSK cihazı olan mekanlarda biletlerinizi Biletinial KİOSK cihazlarından da alabilirsiniz.
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFive" aria-expanded="false"
-                                                aria-controls="collapseFive">
-                                            Televizyonum logoda kalıyor, açılıyor kapanıyor?
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Biletimi kaybettim ne yapmalıyım?
                                         </button>
                                     </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                         data-bs-parent="#accordion1">
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Bu durum anakart işlemci arızası olabilir. Diğer başlıca nedenler, flaş arızası,
-                                            güncelleme
-                                            eksikliği. Destek ve servis kaydı için bizimle iletişime geçin.
+                                            Eğer biletiniz bir elektronik bilet ise hiç korkmayın biz size yardımcı olabiliriz. Kaybettiğiniz bilet fiziki olarak satın aldığınız bilet ise biletin tekrar yazdırılması teknik olarak mümkün değildir. Bu nedenle satın aldığınız bileti saklamak ve korumak tamamen sizin sorumluluğunuzdadır.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                            Ekran Değişiminden Sonra Tv Eski Gibi Olur Mu?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                         data-bs-parent="#accordion1">
-                                        <div class="accordion-body">
-                                            Televizyon ekranlarının yan sanayi üretimi dünyada yoktur. Tv ekranı yan
-                                            sanayisi diye birşey
-                                            olamaz. Takılan paneller televizyonunuzun orijinal ekranıdır. Aksi halde tv
-                                            çalışmaz. Dünyada panel
-                                            üreten firmalar televizyon sektörünün devleridir. O yüzden içiniz rahat olsun.
-                                            Ekran değişimi
-                                            yapıldıktan sonra televizyonunuz aldığınız ilk günkü görünümüne geri dönecektir.
-                                            Tv Kırık Ekran
-                                            değişimi bizimle iletişime geçin.
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -204,30 +141,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
+                        <h6>Hakkında</h6>
+                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+                        <h6>Hızlı Linkler</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                            <li><a href="hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="">Duyurular</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
+                        <h6>Filmler Hakkında</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
+                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
+                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
+                            <li><a href="">Gizlilik Politikası</a></li>
+                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
                         </ul>
                     </div>
                 </div>

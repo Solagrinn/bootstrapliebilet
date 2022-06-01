@@ -39,44 +39,120 @@
                                style="color: #4672a3!important">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vizyondakiler.xhtml">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
 
+        <section id="iletisim" class="section pb-5 animate__animated animate__backInUp" style="background-image:url(./resources/img/arkaplan.png);">
+            <h2 class="section-heading h1 pt-4"></h2>
+            <div class="row" style="margin: 0px 0px 0px 0px; height: 589px; width: 1520px;">
+                <div class="col-lg-5 mb-4">
+                    <div class="card" style="background: #00000030">
+                        <div class="card-body">
+                            <div class="form-header blue accent-1" style="text-align:center">
+                                <h3><i class="fas fa-envelope"></i>İletişim Formu</h3>
+                            </div>
+                            <br/>
+                            <div class="md-form">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <label for="form-name">Adınız ve Soyadınız (Gerekli)</label>
+                                <input type="text" id="form-name" class="form-control forminputs"/>
+                            </div>
+                            <br/>
+                            <div class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <label for="form-email">E-posta (Gerekli)</label>
+                                <input type="text" id="form-email" class="form-control forminputs"/>
+                            </div>
+                            <br/>
+                            <div class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <label for="form-email">Telefon</label>
+                                <input type="text" id="form-email" class="form-control forminputs"
+                                       placeholder="+90 (535) 535-3535"/>
+                            </div>
+                            <br/>
+                            <div class="md-form">
+                                <i class="fas fa-tag prefix grey-text"></i>
+                                <label for="form-Subject">Konu</label>
+                                <input type="text" id="form-Subject" class="form-control forminputs"/>
+                            </div>
+                            <br/>
+                            <div class="md-form">
+                                <i class="fas fa-pencil-alt prefix grey-text"></i>
+                                <label for="form-text">Mesajınız</label>
+                                <textarea id="form-text" class="form-control md-textarea forminputs" rows="3"></textarea>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div id="map-container-google-11" class="z-depth-1-half map-container-6"
+                         style="height: 400px; margin: 0px 0px 0px 0px">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Üniversite,+Bağlariçi+Cd.+No:3,+34320+Avcılar%2Fİstanbul&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                            frameborder="0" style="border:0" width="530" height="400" allowfullscreen="true"></iframe>
+                    </div>
+                    <br/>
+                    <div id="bilgiler" class="row text-center">
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+                            <p>Üniversite, Bağlariçi Cd. No:3, 34320</p>
+                            <p>Avcılar / İSTANBUL</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+                            <p>+90 (535) 535-3535</p>
+                            <p>Pazartesi - Cumartesi, 8:00-22:00</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+                            <p>info@ebilet.com</p>
+                            <p>sale@ebilet.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
+                        <h6>Hakkında</h6>
+                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+                        <h6>Hızlı Linkler</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                            <li><a href="hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="">Duyurular</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
+                        <h6>Filmler Hakkında</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
+                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
+                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
+                            <li><a href="">Gizlilik Politikası</a></li>
+                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -101,6 +177,20 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            window.onload = function () {
+                setTimeout(resizeFunction, 1000);
+            };
+        </script>
+
+        <script>
+            function resizeFunction() {
+                document.getElementById('bilgiler').style.width = (window.innerWidth - 649).toString() + "px";
+                document.getElementById('map-container-google-11').style.width = (window.innerWidth - 673).toString() + "px";
+                document.getElementById("iletisim").style.height = (document.getElementById("bilgiler").getBoundingClientRect().height + 589).toString() + "px";
+            }
+        </script>
 
         <script src="/EBilet/faces/javax.faces.resource/js/bootstrap.bundle.min.js"></script>
     </h:body>

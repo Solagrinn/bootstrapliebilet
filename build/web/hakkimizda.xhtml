@@ -39,32 +39,47 @@
                             <a class="nav-link" href="iletisim.xhtml">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vizyondakiler.xhtml">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
 
-        <section id="hakkimizda" class="section pb-5 animate__animated animate__backInUp" style="background: #00000025;">
+
+        <section id="hakkimizda" class="section pb-5 animate__animated animate__backInUp" style="background-image:url(./resources/img/arkaplan.png);">
             <h2 class="section-heading h1 pt-4"></h2>
             <div style="height: 40px"></div>
             <div class="row" style="margin: 0px 0px 0px 0px; height: 549px; width: 1500px;">
                 <div class="col-lg-5 mb-4">
-                    <div class="card tip1" id="hakkimizdacard" style="background: #00000025; margin-left: 35px;">
+                    <div class="card" id="hakkimizdacard" style="background: #00000025; margin-left: 35px; width: calc(100vw - 35.7rem);">
                         <div class="card-body">
                             <h1 style="margin: 0px 0px 0px 0px; text-align:center;">Hakkımızda</h1>
                             <div style="height: 15px;"></div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Biz kimiz …
+                                <br/>
+                                <br/>
+                                2008 yılında kurulan ve ilk şubesini Nisan 2009’da Gaziantep Sanko Park AVM bünyesinde 7 salon olarak hizmete açan 
+                                <br/>
+                                EBilet sinemaları, bugün 12 ilde 24 şube ve toplam 173 salonla sinemaseverlere hizmet vermektedir.
+                                <br/>
+                                <br/>
+                                Misyonumuz …
+                                <br/>
+                                <br/>
+                                Sinema salonu işletmeciliğini bilinen kalıpların dışına çıkarmayı kendine hedef olarak belirleyen EBilet,
+                                <br/>
+                                öncelikle hem salonlarda, hem de fuaye alanlarında seyircinin rahatını ön planda tutmaktadır.
+                                <br/>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div style="height: 400px; margin-left: 400px">
-                        <img id="resim" src="canak.jpg" width="450" height="521"/>
+                        <img id="resim" src="/EBilet/faces/javax.faces.resource/img/sinema.jpg" width="450" height="521"/>
                     </div>
                     <br/>
                 </div>
@@ -75,30 +90,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
+                        <h6>Hakkında</h6>
+                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+                        <h6>Hızlı Linkler</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                            <li><a href="hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="">Duyurular</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
+                        <h6>Filmler Hakkında</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
+                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
+                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
+                            <li><a href="">Gizlilik Politikası</a></li>
+                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
                         </ul>
                     </div>
                 </div>

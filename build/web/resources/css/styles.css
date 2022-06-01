@@ -114,15 +114,10 @@ main {
     text-align: center;
 }
 
-.row {
-    margin-bottom: 40px;
-}
 
-.row::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
+
+
 
 .col-4 {
     float: left;

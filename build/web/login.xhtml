@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/navbarandfooter.css"/>
         <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
- <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/login.css"/>
- 
+
     </h:head>
     <h:body>
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
@@ -39,16 +38,16 @@
                             <a class="nav-link" href="iletisim.xhtml">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vizyondakiler.xhtml">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
-        
 
-        <div style="background-image:url(./resources/img/arkaplan.png)">
+
+        <div style="background-image:url(./resources/img/arkaplan.png); padding-top: 110px; padding-bottom: 110px;">
             <main id="content" role="main" >
                 <!-- Form -->
                 <div class="container">
@@ -66,11 +65,11 @@
                                         <!-- End Heading -->
 
                                         <!-- Form -->
-                                        <form action="" method="post">
+                                        <h:form>
                                             <!-- Form -->
                                             <div class="mb-4">
                                                 <label class="form-label" for="inputEmail">E-Posta</label>
-                                                <input type="email" class="form-control form-control-lg" name="email" id="inputEmail" placeholder="name@example.com" aria-label="name@example.com" value="" required="true"/>
+                                                <h:inputText value="#{GirisBean.email}" class="form-control form-control-lg" id="inputEmail" required="true"/>
                                             </div>
                                             <!-- End Form -->
 
@@ -82,15 +81,7 @@
                                                 </div>
 
                                                 <div class="input-group input-group-merge">
-                                                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="inputPassword" placeholder="*********" aria-label="*********" required="true" minlength="4" data-hs-toggle-password-options='{
-                                                           "target": "#changePassTarget",
-                                                           "defaultClass": "icon-eye-off",
-                                                           "showClass": "icon-eye",
-                                                           "classChangeTarget": "#changePassIcon"
-                                                           }'/>
-                                                    <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
-                                                        <i id="changePassIcon" class="icon-eye"></i>
-                                                    </a>
+                                                    <h:inputText value="#{GirisBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->
@@ -98,13 +89,13 @@
                                             <input type="hidden" name="spamToken" value="9AE96EEF2B112C013244CC4B8FC97CF6" />
 
                                             <div class="d-grid mb-4">
-                                                <button type="submit" name="login" class="btn btn-primary btn-lg">Giriş Yap</button>
+                                                <h:commandButton value="Giriş Yap" action="#{GirisBean.girisYap()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
                                             </div>
 
                                             <div class="text-center">
                                                 <p>Hesabınız yok mu? <a class="link" href="register.xhtml">Hesap Oluştur</a></p>
                                             </div>
-                                        </form>
+                                        </h:form>
                                         <!-- End Form -->
                                     </div>
                                 </div>
@@ -123,30 +114,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
+                        <h6>Hakkında</h6>
+                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
+                        <h6>Hızlı Linkler</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                            <li><a href="hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="">Duyurular</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
+                        <h6>Filmler Hakkında</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
+                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
+                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
+                            <li><a href="">Gizlilik Politikası</a></li>
+                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
                         </ul>
                     </div>
                 </div>
