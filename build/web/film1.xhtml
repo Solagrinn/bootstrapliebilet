@@ -18,27 +18,27 @@
     <h:body>
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
             <div class="container-fluid">
-                <a href="/EBilet/faces/index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
-                <a href="/EBilet/faces/index.xhtml" class="navbar-brand" style="color:white; font-weight: bold;">E-BİLET</a>
+                <a href="index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
+                <a href="index.xhtml" class="navbar-brand" style="color:white; font-weight: bold;">E-BİLET</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin: 0px 20px 0px 0px;">
                         <li class="nav-item">
-                            <a class="nav-link" href="/EBilet/faces/index.xhtml">ANA SAYFA</a>
+                            <a class="nav-link" href="index.xhtml">ANA SAYFA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/EBilet/faces/hakkimizda.xhtml">HAKKIMIZDA</a>
+                            <a class="nav-link" href="hakkimizda.xhtml">HAKKIMIZDA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/EBilet/faces/sss.xhtml">SSS</a>
+                            <a class="nav-link" href="sss.xhtml">SSS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/EBilet/faces/iletisim.xhtml">İLETİŞİM</a>
+                            <a class="nav-link" href="iletisim.xhtml">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/EBilet/faces/index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
                     <h:outputText value="#{GirisBean.response()}" escape="false"/>
@@ -50,7 +50,7 @@
 
         <div class="row">
             <div class=" col-2"  >
-                <img src="https://kdaidggt0f3v.merlincdn.net/Uploads/Films/adamlar-2022523193411.jpg" alt="" class="rounded" style="height:310px ;width: 230px; margin-left:49px;"/>
+                <img src="resources/img/poster-1.jpeg" alt="" class="rounded" style="height:310px ;width: 230px; margin-left:49px;"/>
             </div>
 
             <div class="col-6" style="margin-left:84px ;">
@@ -81,10 +81,10 @@
 
             <div class="col-2" style="margin-right:5px ;">
                 <div class="row">
-                    <button type="button" class="btn btn-primary">Fragmanı izle</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
                 </div>
                 <div class="row my-2">
-                    <button type="button" class="btn btn-danger">Bilet satın al</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
                 </div>
             </div>
         
@@ -114,29 +114,30 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>Hakkında</h6>
-                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
+                        <h6>About</h6>
+                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Hızlı Linkler</h6>
+                        <h6>Categories</h6>
                         <ul class="footer-links">
-                            <li><a href="/EBilet/faces/hakkimizda.xhtml">Biz kimiz?</a></li>
-                            <li><a href="/EBilet/faces/iletisim.xhtml">Bize Ulaşın</a></li>
-                            <li><a href="/EBilet/faces/sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
-                            <li><a href="/EBilet/faces/index.xhtml#vizyondakiler">Vizyondakiler</a></li>
-                            <li><a href="">Duyurular</a></li>
+                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
-                        <h6>Filmler Hakkında</h6>
+                        <h6>Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
-                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
-                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
-                            <li><a href="">Gizlilik Politikası</a></li>
-                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
+                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>

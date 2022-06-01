@@ -20,31 +20,31 @@
     <h:body>
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
             <div class="container-fluid">
-                <a href="index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
-                <a href="index.xhtml" class="navbar-brand" style="color:white; font-weight: bold;">E-BİLET</a>
+                <a href="/EBilet/faces/index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
+                <a href="/EBilet/faces/index.xhtml" class="navbar-brand" style="color:white; font-weight: bold;">E-BİLET</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin: 0px 20px 0px 0px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.xhtml"
+                            <a class="nav-link active" aria-current="page" href="/EBilet/faces/index.xhtml"
                                style="color: #4672a3!important">ANA SAYFA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="hakkimizda.xhtml">HAKKIMIZDA</a>
+                            <a class="nav-link" href="/EBilet/faces/hakkimizda.xhtml">HAKKIMIZDA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sss.xhtml">SSS</a>
+                            <a class="nav-link" href="/EBilet/faces/sss.xhtml">SSS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="iletisim.xhtml">İLETİŞİM</a>
+                            <a class="nav-link" href="/EBilet/faces/iletisim.xhtml">İLETİŞİM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
+                            <a class="nav-link" href="/EBilet/faces/index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
                         </li>
                     </ul>
-                    <a href="faces/login.xhtml"><button class="form-inline my-2 my-lg-0 btn btn-primary" type="button" aria-expanded="false" style="background-color:#2e4c6d">Giriş Yap</button></a>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
                 </div>
             </div>
         </nav>
@@ -126,7 +126,7 @@
                                     <h2 style="color:orange">Adamlar</h2>
                                     <p style="color:grey">Dram Korku Bilim-Kurgu</p>
                                     <p>
-                                        <a href="filmler/adamlar.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/adamlar.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                     <h2 style="color:orange">Top Gun: Maverick</h2>
                                     <p style="color:grey">Aksiyon Drama</p>
                                     <p>
-                                        <a href="filmler/topGunMaverick.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/topGunMaverick.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                                     <h2 style="color:orange">Dijital Esaret</h2>
                                     <p style="color:grey">Komedi</p>
                                     <p>
-                                        <a href="filmler/dijitalEsaret.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/dijitalEsaret.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
                                     <h2 style="color:orange">Örümcek ve Kız</h2>
                                     <p style="color:grey">Dram</p>
                                     <p>
-                                        <a href="filmler/orumcekveKiz.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/orumcekveKiz.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
                                     <h2 style="color:orange">Rüzgargülü</h2>
                                     <p style="color:grey">Aile</p>
                                     <p>
-                                        <a href="filmler/ruzgarGulu.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/ruzgarGulu.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -188,7 +188,7 @@
                                     <h2 style="color:orange">İkinci Seans: AEEP</h2>
                                     <p style="color:grey">Korku</p>
                                     <p>
-                                        <a href="filmler/ıkıncıSeans.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/ıkıncıSeans.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
                                     <h2 style="color:orange">Payidar: Gazi'nin Büyük Tablosu</h2>
                                     <p style="color:grey">Belgesel</p>
                                     <p>
-                                        <a href="filmler/payidar.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/payidar.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                                     <h2 style="color:orange">Hopper ve Çılgın Çetesi: Büyük Macera</h2>
                                     <p style="color:grey">Komedi Macera Animasyon</p>
                                     <p>
-                                        <a href="filmler/hopper.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/hopper.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                                     <h2 style="color:orange">Benim Güneşli Maad'ım</h2>
                                     <p style="color:grey">Dram Animasyon</p>
                                     <p>
-                                        <a href="filmler/gunesliMaad.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/gunesliMaad.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@
                                     <h2 style="color:orange">After Ayrılık</h2>
                                     <p style="color:grey">Dram Romantik Drama</p>
                                     <p>
-                                        <a href="filmler/afterAyrilik.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/afterAyrilik.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -252,7 +252,7 @@
                                     <h2 style="color:orange">Domuz</h2>
                                     <p style="color:grey">Dram Gerilim</p>
                                     <p>
-                                        <a href="filmler/domuz.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/domuz.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -264,7 +264,7 @@
                                     <h2 style="color:orange">Süper Yetenek 2</h2>
                                     <p style="color:grey">Komedi Macera Animasyon</p>
                                     <p>
-                                        <a href="filmler/superYetenek2.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
+                                        <a href="/EBilet/faces/filmler/superYetenek2.xhtml" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Biletleri Gör</a>
                                     </p>
                                 </div>
                             </div>
@@ -290,10 +290,10 @@
                     <div class="col-xs-6 col-md-3">
                         <h6>Hızlı Linkler</h6>
                         <ul class="footer-links">
-                            <li><a href="hakkimizda.xhtml">Biz kimiz?</a></li>
-                            <li><a href="iletisim.xhtml">Bize Ulaşın</a></li>
-                            <li><a href="sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
-                            <li><a href="index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="/EBilet/faces/hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="/EBilet/faces/iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="/EBilet/faces/sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="/EBilet/faces/index.xhtml#vizyondakiler">Vizyondakiler</a></li>
                             <li><a href="">Duyurular</a></li>
                         </ul>
                     </div>
