@@ -9,7 +9,6 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -94,6 +93,7 @@ body {
 }
 
 .row {
+    justify-content: center;
   display: flex;
 }
 
