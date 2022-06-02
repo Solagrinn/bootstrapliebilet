@@ -19,6 +19,7 @@ public class GirisBean {
 
     String email;
     String sifre;
+    String customerid;
 
     public String girisYap() throws SQLException, ClassNotFoundException {
         Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
@@ -39,6 +40,7 @@ public class GirisBean {
             ResultSet rs = getEntry.executeQuery();
 
             if (rs.next()) { // login başarılı
+                customerid = rs.getString(1);
                 return "index.xhtml?faces-redirect=true";
             } else {
                 return "sss.xhtml?faces-redirect=true";
@@ -47,6 +49,14 @@ public class GirisBean {
         } finally {
             connection.close();
         }
+    }
+
+    public String getCustomerid() {
+        return customerid;
+    }
+
+    public void setCustomerid(String customerid) {
+        this.customerid = customerid;
     }
 
     public String getEmail() {
@@ -66,7 +76,7 @@ public class GirisBean {
     }
 
     public String response() throws ClassNotFoundException, SQLException {
-        if (email != null && sifre != null) {
+        if (email != null && sifre != null && !email.equals("")) {
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
             Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/EBiletDB", "admin", "admin");
 
@@ -84,8 +94,9 @@ public class GirisBean {
 
                 ResultSet rs = getEntry.executeQuery();
                 rs.next();
-                
-                return "Hoşgeldin, " + rs.getString(2);
+
+                return "<a href=\"/EBilet/faces/profil.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">"+ rs.getString(2) + " " + rs.getString(3) +"</button></a>"+
+                        "<a href=\"/EBilet/faces/cikis.xhtml\"><button class=\"fa fa-sign-out form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:red; height:42px; width:52px;\"></button></a>";
 
             } finally {
                 connection.close();
