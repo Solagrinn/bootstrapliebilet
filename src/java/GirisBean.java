@@ -51,6 +51,14 @@ public class GirisBean {
         }
     }
 
+    public String cikisYap() {
+        email = "";
+        sifre = "";
+        customerid = "";
+        
+        return "index.xhtml";
+    }
+
     public String getCustomerid() {
         return customerid;
     }
@@ -95,8 +103,8 @@ public class GirisBean {
                 ResultSet rs = getEntry.executeQuery();
                 rs.next();
 
-                return "<a href=\"/EBilet/faces/profil.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">"+ rs.getString(2) + " " + rs.getString(3) +"</button></a>"+
-                        "<a href=\"/EBilet/faces/cikis.xhtml\"><button class=\"fa fa-sign-out form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:red; height:42px; width:52px;\"></button></a>";
+                return "<a href=\"/EBilet/faces/profil.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">" + rs.getString(2) + " " + rs.getString(3) + "</button></a>"
+                        + "<a href=\"/EBilet/faces/cikis.xhtml\"><button class=\"fa fa-sign-out form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:red; height:42px; width:52px;\"></button></a>";
 
             } finally {
                 connection.close();
