@@ -62,36 +62,35 @@
                             <div class="md-form">
                                 <i class="fa fa-user prefix grey-text"></i>
                                 <label for="form-name"> Adınız ve Soyadınız (Gerekli)</label>
-                                <input type="text" id="form-name" class="form-control forminputs"/>
+                                <h:inputText value="#{IletisimBean.adsoyad}" class="form-control forminputs" id="adsoyad" required="true"/>
                             </div>
                             <br/>
                             <div class="md-form">
                                 <i class="fa fa-envelope prefix grey-text"></i>
                                 <label for="form-email"> E-posta (Gerekli)</label>
-                                <input type="text" id="form-email" class="form-control forminputs"/>
+                                <h:inputText value="#{IletisimBean.email}" class="form-control forminputs" id="email" required="true"/>
                             </div>
                             <br/>
                             <div class="md-form">
-                                <i class="fa fa-envelope prefix grey-text"></i>
+                                <i class="fa fa-phone prefix grey-text"></i>
                                 <label for="form-email"> Telefon</label>
-                                <input type="text" id="form-email" class="form-control forminputs"
-                                       placeholder="+90 (535) 535-3535"/>
+                                <h:inputText value="#{IletisimBean.telefon}" class="form-control forminputs" id="telefon" required="true"/>
                             </div>
                             <br/>
                             <div class="md-form">
                                 <i class="fa fa-tag prefix grey-text"></i>
                                 <label for="form-Subject"> Konu</label>
-                                <input type="text" id="form-Subject" class="form-control forminputs"/>
+                                <h:inputText value="#{IletisimBean.konu}" class="form-control forminputs" id="konu" required="true"/>
                             </div>
                             <br/>
                             <div class="md-form">
                                 <i class="fa fa-pencil prefix grey-text"></i>
                                 <label for="form-text"> Mesajınız</label>
-                                <textarea id="form-text" class="form-control md-textarea forminputs" rows="3"></textarea>
+                                <h:inputTextarea value="#{IletisimBean.mesaj}" rows="3" class="form-control forminputs" id="mesaj" required="true"/>
                             </div>
 
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary">Gönder</button>
+                                <h:commandButton value="Gönder" action="#{IletisimBean.formGonder()}" onclick="alert('İletişim formu başarıyla gönderildi.\nEn kısa sürede bizden bir mail alacaksınız.');" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
                             </div>
                         </div>
                     </div>
@@ -101,7 +100,7 @@
                          style="height: 98%; margin: 0px 0px 0px 0px">
                         <iframe
                             src="https://maps.google.com/maps?q=Üniversite,+Bağlariçi+Cd.+No:3,+34320+Avcılar%2Fİstanbul&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                            frameborder="0" style="border:0" width="98%" height="400" allowfullscreen="true"></iframe>
+                            frameborder="0" style="border:0" width="98%" height="75%" allowfullscreen="true"></iframe>
                     </div>
                     <br/>
                     <div id="bilgiler" class="row text-center" style="margin-top:-18%">

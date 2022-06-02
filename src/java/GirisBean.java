@@ -85,6 +85,45 @@ public class GirisBean {
         }
     }
 
+    public String getAlinanBiletler() throws SQLException, ClassNotFoundException {
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+        Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/EBiletDB", "admin", "admin");
+
+        if (connection == null) {
+            throw new SQLException("Unable to connect to DataSource");
+        }
+
+        try {
+            PreparedStatement getEntry = connection.prepareStatement(
+                     
+
+
+                    
+                    
+                    "SELECT * FROM FILM INNER JOIN (SELECT * FROM TRANSACTIONS WHERE CUSTOMER_ID = ?) AS TEMP on FILM.FILM_ID = TEMP.CUSTOMER_ID");
+
+            getEntry.setString(1, customerid);
+
+            ResultSet rs = getEntry.executeQuery();
+
+            String alinanbiletler="<br/>Alınan Biletler:<br/>";
+            
+            int i=1;
+            
+            while(rs.next())
+            {
+                 alinanbiletler+=i + "- Film: " + rs.getString(2) + " Koltuk No: " + rs.getString(7) + " Satın Alma Tarihi: " + rs.getString(8) +"<br/>";
+                 i++;
+            }
+               
+
+            return alinanbiletler;
+
+        } finally {
+            connection.close();
+        }
+    }
+
     public String getCustomerid() {
         return customerid;
     }
