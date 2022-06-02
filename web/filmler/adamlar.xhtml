@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     </h:head>
-    <h:body>
+    <h:body style="background-image: linear-gradient(280deg, #ffd045 0%, #d14545 74%);">
         <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
             <div class="container-fluid">
                 <a href="/EBilet/faces/index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
@@ -54,7 +54,7 @@
                 <img src="https://kdaidggt0f3v.merlincdn.net/Uploads/Films/adamlar-2022523193411.jpg" alt="" class="rounded" style="height:310px ;width: 230px; margin-left:49px;"/>
             </div>
 
-            <div class="col-6" style="margin-left:84px ;">
+            <div class="col-4" style="margin-left:84px ;">
 
                 <p class="movie__option">
                     <strong>Kategori: </strong>
@@ -76,23 +76,30 @@
                     <span>Tom Cruise </span>
                     <span>Jennifer Connelly </span>
                 </p>
-            </div>
 
-
-
-            <div class="col-2" style="margin-right:5px ;">
                 <div class="row">
                     <h:form>
-                    <button type="button" class="btn btn-primary" style="width:200px">Fragmanı izle</button>
+                        <a class="btn btn-warning" href="https://www.imdb.com/title/tt13841850/?ref_=fn_al_tt_1" role="button" style="width:200px">IMDB</a>
                     </h:form>
                 </div>
+                
                 <div class="row my-2">
                     <h:form>
-                        <h:commandButton value="Bilet satın al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px">
+                        <h:commandButton value="Bilet Satın Al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px;background-color:#251D3A">
                             <f:setPropertyActionListener target="#{OdemeBean.email}" value="#{GirisBean.email}" />
                         </h:commandButton>
                     </h:form>
                 </div>
+            </div>
+
+
+
+            <div class="col-5">
+
+                <iframe width="500" height="281" src="https://www.youtube.com/embed/nzDmC6beY_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+
+
+
             </div>
 
 
