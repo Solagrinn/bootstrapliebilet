@@ -55,8 +55,34 @@ public class GirisBean {
         email = "";
         sifre = "";
         customerid = "";
-        
+
         return "index.xhtml";
+    }
+
+    public String getIsim() throws SQLException, ClassNotFoundException {
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+        Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/EBiletDB", "admin", "admin");
+
+        if (connection == null) {
+            throw new SQLException("Unable to connect to DataSource");
+        }
+
+        try {
+            PreparedStatement getEntry = connection.prepareStatement(
+                    "SELECT * FROM CUSTOMER "
+                    + "WHERE USERNAME = ? AND PASSWORD = ?");
+
+            getEntry.setString(1, getEmail());
+            getEntry.setString(2, getSifre());
+
+            ResultSet rs = getEntry.executeQuery();
+
+            rs.next();
+            return rs.getString(2) + " " + rs.getString(3);
+
+        } finally {
+            connection.close();
+        }
     }
 
     public String getCustomerid() {
