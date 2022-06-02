@@ -11,15 +11,14 @@
 
     </h:head>
     <h:body>
-        <h:form id="emailForm">
-            <h:inputHidden id="mail" value="#{GirisBean.email}" />
+        <h:form>
+            <h:commandButton action="#{GirisBean.cikisYap()}" class="cikis form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
+
         </h:form>
-        
+
         <script>
             window.onload = function () {
-                document.getElementById('emailForm:mail').value = "";
-                document.getElementById("emailForm").submit();
-                location.href = "index.xhtml";
+                document.getElementsByClassName("cikis")[0].click();
             };
         </script>
 
