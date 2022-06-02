@@ -97,7 +97,7 @@ public class GirisBean {
 
         try {
             PreparedStatement getEntry = connection.prepareStatement(
-                    "SELECT * FROM FILM INNER JOIN (SELECT * FROM TRANSACTIONS WHERE CUSTOMER_ID = ?) AS TEMP on FILM.FILM_ID = TEMP.CUSTOMER_ID");
+                    "SELECT * FROM FILM INNER JOIN (SELECT * FROM TRANSACTIONS WHERE CUSTOMER_ID = ?) AS TEMP on FILM.FILM_ID = TEMP.FILM_ID");
 
             getEntry.setString(1, customerid);
 

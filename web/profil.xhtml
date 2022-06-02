@@ -45,24 +45,19 @@
             </div>
         </nav>
 
-        <div id="test" style="height:700px;">
+        <div id="test" style="height:800px;">
 
 
 
-            <div class="window">
-                <div class="overlay"></div>
-                <div class="box header">
+            <div class="window" style="height:700px">
+                <div class="overlay" ></div>
+                <div class="box header" style="height:570px">
                     <img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" alt="" />
                     <h2>#{GirisBean.getIsim()}</h2>
                     <h4>#{GirisBean.email}</h4>
                     <h4><h:outputText value="#{GirisBean.getAlinanBiletler()}" escape="false"/></h4>
                 </div>
-                <div class="box footer">
-                    <ul>
-                        <li><a href=""><span class="ion-ios-camera-outline"></span> 401</a></li>
-                        <li><a href=""><span class="ion-ios-heart-outline"></span> 333K</a></li>
-                        <li><a href=""><span class="ion-ios-person-outline"></span> 225M</a></li>
-                    </ul>
+                <div class="box footer" style="margin-top:150px">
                     <a href="/EBilet/faces/sifredegistir.xhtml" class="btn" style="width:80%; background-color:lightblue">Şifre Değiştir</a>
                     <a href="/EBilet/faces/cikis.xhtml" class="btn" style="width:80%; background-color:#ffd045">Çıkış yap</a>
                 </div>

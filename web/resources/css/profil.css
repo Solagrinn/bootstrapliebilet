@@ -84,9 +84,9 @@ img {
 
 .window {
   box-shadow: 0 0 100px  rgba(0,0,0,0.25);
-  height: 560px;
+  width: 555px;
   margin: 2em auto 0;
-  width: 320px;
+  height: 685px;
 }
 
 .header {
