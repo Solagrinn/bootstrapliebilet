@@ -50,7 +50,7 @@
         <div>
             <main class="page payment-page">
                 <section class="payment-form dark" style="background-color: #ffd045;
-background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
+                         background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
                     <div class="container">
                         <div class="block-heading">
                             <h2 style="color:orange">Ödemenizin tamamlanmasına sadece birkaç adım kaldı.</h2>
@@ -62,7 +62,7 @@ background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
                                 <div class="item">
                                     <span class="price">50 TL</span>
                                     <p class="item-name">#{OdemeBean.koltukno} Koltuğu</p>
-                                    <p class="item-description">Adamlar Filmi</p>
+                                    <p class="item-description">#{OdemeBean.film} Filmi</p>
                                 </div>
                             </div>
                             <div class="card-details">
@@ -89,7 +89,9 @@ background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);"  >
                                         <input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1"></input>
                                     </div>
                                     <div class="form-group col-sm-12">
-                                        <button type="button" class="btn btn-primary btn-block">Tamamla</button>
+                                        <h:form>
+                                            <h:commandButton type="submit" value="Tamamla" action="#{OdemeBean.satinal()}" class="btn btn-primary btn-block" style="width: 100px; margin-top:20px"/>
+                                        </h:form>
                                     </div>
                                 </div>
                             </div>
