@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>E-Bilet</title>
+
+        <style>
+
+        </style>
+
+        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/navbarandfooter.css"/>
+        <link rel="stylesheet" href="/EBilet/faces/javax.faces.resource/css/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    </h:head>
+    <h:body style="background-image: linear-gradient(280deg, #ffd045 0%, #d14545 74%);">
+        <nav class="navbar navbar-expand-lg bg-light animate__animated animate__fadeInDown">
+            <div class="container-fluid">
+                <a href="/EBilet/faces/index.xhtml"><img src="/EBilet/faces/javax.faces.resource/img/movie.jpg" width="50" height="50" style="margin: 0px 20px 0px 0px"/></a>
+                <a href="/EBilet/faces/index.xhtml" class="navbar-brand" style="color:white; font-weight: bold;">E-BİLET</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin: 0px 20px 0px 0px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/EBilet/faces/index.xhtml">ANA SAYFA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/EBilet/faces/hakkimizda.xhtml">HAKKIMIZDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/EBilet/faces/sss.xhtml">SSS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/EBilet/faces/iletisim.xhtml">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/EBilet/faces/index.xhtml#vizyondakiler">VİZYONDAKİLER</a>
+                        </li>
+                    </ul>
+                    <h:outputText value="#{GirisBean.response()}" escape="false"/>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container my-4"/>
+
+        <div class="row">
+
+            <div class=" col-2"  >
+                <img src="https://kdaidggt0f3v.merlincdn.net/Uploads/Films/benim-gunesli-maadim-202252310116.jpg" alt="" class="rounded" style="height:310px ;width: 230px; margin-left:49px;"/>
+            </div>
+
+            <div class="col-4" style="margin-left:84px ;">
+
+                <p class="movie__option">
+                    <strong>Kategori: </strong>
+                    <span>Animasyon </span>
+                    <span>Dram </span>
+                </p>
+                <p class="movie__option">
+                    <strong>Vizyona Giriş: </strong>01/11/2019
+
+                </p>
+                <p class="movie__option">
+                    <strong>Yönetmen: </strong>
+                    <span>Michaela Pavlatova </span>
+                </p>
+                <p class="movie__option">
+                </p>
+
+
+                <div class="row">
+                    <h:form>
+                        <a class="btn btn-warning" href="https://www.imdb.com/?ref_=nv_home" role="button" style="width:200px">IMDB</a>
+                    </h:form>
+                </div>
+
+                <div class="row my-2">
+                    <h:form>
+                        <h:commandButton value="Bilet Satın Al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px;background-color:#251D3A">
+                            <f:setPropertyActionListener target="#{OdemeBean.email}" value="#{GirisBean.email}" />
+                        </h:commandButton>
+                    </h:form>
+                </div>
+            </div>
+
+
+
+            <div class="col-5">
+
+                <iframe width="500" height="281" src="https://www.youtube.com/embed/JCCbwrtsx3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="container my-4">
+            <h2 class="page-heading text-black">Filmin Konusu</h2>
+
+            <p>Genç bir Çek kadın olan Herra, bir Afgan olan Nazir’e aşık olduğunda,
+                ne Taliban sonrası Afganistan’da onu nasıl bir hayatın beklediğinden ne de dahil olmak üzere olduğu aileden haberdardır.</p>
+
+            <p>Liberal bir büyükbaba, son derece zeki, evlat edinilmiş bir çocuk ve kocasının şiddet dolu
+                pençesinden kurtulmak için her şeyi yapacak olan Freshta da dahil olmak üzere onu hiç
+                tahmin edemeyeceği bir hayat beklemektedir.
+            </p>
+
+
+        </div>
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>Hakkında</h6>
+                        <p class="text-justify">E-Bilet Cinema Group; 2008 yılında teknoloji ve konforu, beklentilerin üzerinde hizmet anlayışı ile birleştirerek, Türkiye’de farklı ve kendine özgü bir sinema deneyimi yaratma felsefesiyle kurulmuştur.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Hızlı Linkler</h6>
+                        <ul class="footer-links">
+                            <li><a href="/EBilet/faces/hakkimizda.xhtml">Biz kimiz?</a></li>
+                            <li><a href="/EBilet/faces/iletisim.xhtml">Bize Ulaşın</a></li>
+                            <li><a href="/EBilet/faces/sss.xhtml">Sıkça Sorulan Sorular (SSS)</a></li>
+                            <li><a href="/EBilet/faces/index.xhtml#vizyondakiler">Vizyondakiler</a></li>
+                            <li><a href="">Duyurular</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Filmler Hakkında</h6>
+                        <ul class="footer-links">
+                            <li><a href="https://www.imdb.com/">IMDB</a></li> 
+                            <li><a href="https://www.imdb.com/chart/top/">IMDB Top 250</a></li>
+                            <li><a href="https://sinema.ktb.gov.tr/">Sinema Genel Müdürlüğü</a></li>
+                            <li><a href="">Gizlilik Politikası</a></li>
+                            <li><a href="https://www.youtube.com/c/Muratsoner">Film İncelemeleri (Youtube)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+                            <a href="#">Zurna Dürümler</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/EBilet/faces/javax.faces.resource/js/bootstrap.bundle.min.js"></script>
+    </h:body>
+</html>
+
