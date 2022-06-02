@@ -81,8 +81,11 @@
                 
                 <div class="row my-2">
                     <h:form>
-                        <h:commandButton value="Bilet Satın Al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px;background-color:#251D3A">
+                        <h:commandButton value="Bilet satın al" action="#{OdemeBean.girisKontrol}" class="form-inline my-2 my-lg-0 btn btn-danger" type="submit" style="width:200px; background-color:#251D3A">
                             <f:setPropertyActionListener target="#{OdemeBean.email}" value="#{GirisBean.email}" />
+                            <f:setPropertyActionListener target="#{OdemeBean.film}" value="Süper Yetenek 2" />
+                            <f:setPropertyActionListener target="#{OdemeBean.filmid}" value="10" />
+                            <f:setPropertyActionListener target="#{OdemeBean.customerid}" value="#{GirisBean.customerid}" />
                         </h:commandButton>
                     </h:form>
                 </div>
