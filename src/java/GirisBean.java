@@ -83,8 +83,12 @@ public class GirisBean {
                 getEntry.setString(2, getSifre());
 
                 ResultSet rs = getEntry.executeQuery();
-                rs.next();
+
+                if (rs == null) {
+                    return "<a href=\"/EBilet/faces/login.xhtml\"><button class=\"form-inline my-2 my-lg-0 btn btn-primary\" type=\"button\" aria-expanded=\"false\" style=\"background-color:#2e4c6d\">Giriş Yap</button></a>";
+                }
                 
+                rs.next();
                 return "Hoşgeldin, " + rs.getString(2);
 
             } finally {
