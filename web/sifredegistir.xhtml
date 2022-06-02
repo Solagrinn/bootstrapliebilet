@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>E-Bilet</title>
 
@@ -46,41 +47,47 @@
             </div>
         </nav>
 
-        <div id="test" style="height:500px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4" style="margin-top:1%">
+        <h:form>
 
-                        <label>Mevcut Şifre</label>
-                        <div class="form-group pass_show"> 
-                            <input type="password" value="faisalkhan@123" class="form-control" placeholder="Current Password"></input>
-                        </div> 
-                        <label>Yeni Şifre</label>
-                        <div class="form-group pass_show"> 
-                            <input type="password" value="faisal.khan@123" class="form-control" placeholder="New Password"></input>
-                        </div> 
-                        <label>Yeni Şifre</label>
-                        <div class="form-group pass_show"> 
-                            <input type="password" value="faisal.khan@123" class="form-control" placeholder="Confirm Password"></input>
-                        </div> 
+            <div id="test" style="height:500px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4" style="margin-top:1%">
 
-                        <div style="text-align:center; margin-top:20px"> 
-                            <a class="btn btn-warning" href="" role="button" style="width:100%; ">Şifre Değiştir</a>
+                            <label>Mevcut Şifre</label>
+                            <div class="form-group pass_show"> 
+                                <h:inputText required="true" class="form-control"/>
+                            </div> 
+                            <label>Yeni Şifre</label>
+                            <div class="form-group pass_show"> 
+                                <h:inputText value="#{Sifre.yenisifre}" required="true" class="form-control"/>
+                            </div> 
+                            <label>Yeni Şifre</label>
+                            <div class="form-group pass_show"> 
+                                <h:inputText required="true" class="form-control"/>
+                            </div> 
+
+                            <div style="text-align:center; margin-top:20px"> 
+                                <h:commandButton value="Şifre Değiştir" action="#{Sifre.sifreDegistir()}"  type="submit" style="background-color:gold; width:100%; height:40px; font-weight:bold">
+                                    <f:setPropertyActionListener target="#{Sifre.customerid}" value="#{GirisBean.customerid}" />
+                                </h:commandButton>
+                            </div>
+                        </div>  
+                        <div class="col-sm-4">
+
+
+
+
+
+
                         </div>
-                    </div>  
-                    <div class="col-sm-4">
-
-
-
-
-
-
                     </div>
                 </div>
+
             </div>
 
-        </div>
+        </h:form>
 
         <footer class="site-footer">
             <div class="container">

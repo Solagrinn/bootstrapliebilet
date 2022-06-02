@@ -70,10 +70,9 @@ public class GirisBean {
         try {
             PreparedStatement getEntry = connection.prepareStatement(
                     "SELECT * FROM CUSTOMER "
-                    + "WHERE USERNAME = ? AND PASSWORD = ?");
+                    + "WHERE USERNAME = ?");
 
             getEntry.setString(1, getEmail());
-            getEntry.setString(2, getSifre());
 
             ResultSet rs = getEntry.executeQuery();
 
@@ -160,10 +159,9 @@ public class GirisBean {
             try {
                 PreparedStatement getEntry = connection.prepareStatement(
                         "SELECT * FROM CUSTOMER "
-                        + "WHERE USERNAME = ? AND PASSWORD = ?");
+                        + "WHERE USERNAME = ?");
 
                 getEntry.setString(1, getEmail());
-                getEntry.setString(2, getSifre());
 
                 ResultSet rs = getEntry.executeQuery();
                 rs.next();
