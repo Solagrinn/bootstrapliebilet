@@ -21,6 +21,8 @@ public class GirisBean {
     String sifre;
     String customerid;
 
+    int girisbasarisiz = 0;
+
     public String girisYap() throws SQLException, ClassNotFoundException {
         Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
         Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/EBiletDB", "admin", "admin");
@@ -46,7 +48,8 @@ public class GirisBean {
                 email = "";
                 sifre = "";
                 customerid = "";
-                return "sss.xhtml?faces-redirect=true";
+                girisbasarisiz = 1;
+                return "login.xhtml?faces-redirect=true";
             }
 
         } finally {
@@ -117,6 +120,15 @@ public class GirisBean {
         } finally {
             connection.close();
         }
+    }
+
+    public String girisBasarili() {
+        if (girisbasarisiz == 1) {
+            girisbasarisiz = 0;
+            return "Kullanıcı adınız veya şifreniz hatalı.";
+        }
+
+        return "Devam etmek için giriş yapmalısınız.";
     }
 
     public String getCustomerid() {

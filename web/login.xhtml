@@ -60,7 +60,7 @@
                                         <!-- Heading -->
                                         <div class="text-center mb-5 mb-md-7">
                                             <h1 class="h2">Oturum Aç</h1>
-                                            <p>Devam etmek için giriş yapmalısınız.</p>
+                                            <p>#{GirisBean.girisBasarili()}</p>
                                         </div>
                                         <!-- End Heading -->
 
@@ -81,7 +81,7 @@
                                                 </div>
 
                                                 <div class="input-group input-group-merge">
-                                                    <h:inputText value="#{GirisBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
+                                                    <h:inputSecret value="#{GirisBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->

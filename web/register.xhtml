@@ -92,7 +92,7 @@
                                             <div class="mb-4">
                                                 <label class="form-label" for="inputPassword">Şifre</label>
                                                 <div class="input-group input-group-merge">
-                                                    <h:inputText value="#{KayitBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
+                                                    <h:inputSecret value="#{KayitBean.sifre}" required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->
@@ -101,13 +101,13 @@
                                             <div class="mb-4">
                                                 <label class="form-label" for="inputPasswordRe">Şifre (Tekrar)</label>
                                                 <div class="input-group input-group-merge">
-                                                    <h:inputText required="true" class="js-toggle-password form-control form-control-lg"/>
+                                                    <h:inputSecret required="true" class="js-toggle-password form-control form-control-lg"/>
                                                 </div>
                                             </div>
                                             <!-- End Form -->
 
                                             <div class="d-grid mb-4">
-                                                <h:commandButton value="Hesap Oluştur" action="#{KayitBean.kayitEt()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
+                                                <h:commandButton value="Hesap Oluştur" onclick="alert('Başarıyla kayıt oldunuz.\nGiriş ekranına aktarılıyorsunuz.')" action="#{KayitBean.kayitEt()}" class="form-inline my-2 my-lg-0 btn btn-primary" type="submit" style="background-color:#106cfc; height:50px; font-weight:bold"/>
                                             </div>
 
                                             <div class="mb-4">
