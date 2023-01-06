@@ -1,7 +1,10 @@
 # bootstrapliebilet
 fully functional cinema ticket ordering website
+---
+this project was made by; 
+---
+Eray Dindar, 
 
-this project was made by 
-Eray Dindar
-Hilmi Murat Oktar
-Eren Doğan
+Hilmi Murat Oktar, 
+
+Eren Doğan.
